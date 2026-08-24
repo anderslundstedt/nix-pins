@@ -8,8 +8,8 @@
     nixpkgs-darwin-stable.url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
     nixpkgs-unstable.url      = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    nix-darwin.url                    = "github:nix-darwin/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
+    nix-darwin-stable.url                    = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
+    nix-darwin-stable.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
 
     home-manager-darwin.url                    = "github:nix-community/home-manager";
     home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
