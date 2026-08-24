@@ -11,10 +11,10 @@
     nix-darwin-stable.url                    = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin-stable.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
 
-    home-manager-darwin.url                    = "github:nix-community/home-manager";
-    home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
-    home-manager-linux.url                     = "github:nix-community/home-manager";
-    home-manager-linux.inputs.nixpkgs.follows  = "nixos-stable";
+    home-manager-darwin-stable.url                    = "github:nix-community/home-manager/release-26.05";
+    home-manager-darwin-stable.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
+    home-manager-linux-stable.url                     = "github:nix-community/home-manager/release-26.05";
+    home-manager-linux-stable.inputs.nixpkgs.follows  = "nixos-stable";
 
     nix-homebrew.url          = "github:zhaofengli/nix-homebrew";
     homebrew-core.url         = "github:homebrew/homebrew-core";
