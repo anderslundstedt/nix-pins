@@ -16,11 +16,11 @@
     home-manager-linux-stable.url                     = "github:nix-community/home-manager/release-26.05";
     home-manager-linux-stable.inputs.nixpkgs.follows  = "nixos-stable";
 
-    nix-homebrew.url          = "github:zhaofengli/nix-homebrew";
-    homebrew-core.url         = "github:homebrew/homebrew-core";
-    homebrew-core.flake       = false;
-    homebrew-cask.url         = "github:homebrew/homebrew-cask";
-    homebrew-cask.flake       = false;
+    nix-homebrew.url    = "github:zhaofengli/nix-homebrew";
+    homebrew-core.url   = "github:homebrew/homebrew-core";
+    homebrew-core.flake = false;
+    homebrew-cask.url   = "github:homebrew/homebrew-cask";
+    homebrew-cask.flake = false;
   };
   outputs = inputs@{...}: {
     inherit inputs;
