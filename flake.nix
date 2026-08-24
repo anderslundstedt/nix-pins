@@ -21,6 +21,11 @@
     homebrew-core.flake = false;
     homebrew-cask.url   = "github:homebrew/homebrew-cask";
     homebrew-cask.flake = false;
+
+    nix-auto-follow-darwin.url = "github:fzakaria/nix-auto-follow";
+    nix-auto-follow-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
+    nix-auto-follow-linux.url = "github:fzakaria/nix-auto-follow";
+    nix-auto-follow-linux.inputs.nixpkgs.follows = "nixos-stable";
   };
   outputs = inputs@{...}: {
     inherit inputs;

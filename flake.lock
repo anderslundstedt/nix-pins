@@ -91,6 +91,46 @@
         "type": "github"
       }
     },
+    "nix-auto-follow-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-darwin-stable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782404455,
+        "narHash": "sha256-yJvy+JrrHxkl+XWZFQo/5o8WSNPUI0O+2yoT2CFKgbI=",
+        "owner": "fzakaria",
+        "repo": "nix-auto-follow",
+        "rev": "83f2b736b2705e536eff7e5075e7b15fba12cb22",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fzakaria",
+        "repo": "nix-auto-follow",
+        "type": "github"
+      }
+    },
+    "nix-auto-follow-linux": {
+      "inputs": {
+        "nixpkgs": [
+          "nixos-stable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782404455,
+        "narHash": "sha256-yJvy+JrrHxkl+XWZFQo/5o8WSNPUI0O+2yoT2CFKgbI=",
+        "owner": "fzakaria",
+        "repo": "nix-auto-follow",
+        "rev": "83f2b736b2705e536eff7e5075e7b15fba12cb22",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fzakaria",
+        "repo": "nix-auto-follow",
+        "type": "github"
+      }
+    },
     "nix-darwin-stable": {
       "inputs": {
         "nixpkgs": [
@@ -248,6 +288,8 @@
         "home-manager-linux-stable": "home-manager-linux-stable",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
+        "nix-auto-follow-darwin": "nix-auto-follow-darwin",
+        "nix-auto-follow-linux": "nix-auto-follow-linux",
         "nix-darwin-stable": "nix-darwin-stable",
         "nix-homebrew": "nix-homebrew",
         "nixos-24-11": "nixos-24-11",
