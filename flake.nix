@@ -8,7 +8,7 @@
     nixpkgs-darwin-stable.url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
     nixpkgs-unstable.url      = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    nix-darwin.url                    = "github:LnL7/nix-darwin";
+    nix-darwin.url                    = "github:nix-darwin/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
 
     home-manager-darwin.url                    = "github:nix-community/home-manager";
