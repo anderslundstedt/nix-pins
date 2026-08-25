@@ -60,6 +60,12 @@
             inputs.home-manager-linux-stable inputs.home-manager-darwin-stable;
           nix-auto-follow     = get-output
             inputs.nix-auto-follow-linux inputs.nix-auto-follow-darwin;
+
+          devShells.default = pkgs-unstable.mkShell {
+            buildInputs = [
+              pkgs-unstable.gnumake
+            ];
+          };
         }
       );
 }
