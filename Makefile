@@ -13,3 +13,6 @@ default:
 clean:
 	# remove anything in .gitignore, including directories
 	git clean -fdX
+
+test:
+	nix flake check --all-systems

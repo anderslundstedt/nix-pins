@@ -61,6 +61,14 @@
           nix-auto-follow     = get-output
             inputs.nix-auto-follow-linux inputs.nix-auto-follow-darwin;
 
+          checks.run-auto-follow = pkgs-unstable.runCommand
+            "check-auto-follow"
+            {nativeBuildInputs = [nix-auto-follow.packages.${system}.default];}
+            ''
+            auto-follow --check ${./flake.lock}
+            touch $out
+            '';
+
           devShells.default = pkgs-unstable.mkShell {
             buildInputs = [
               pkgs-unstable.gnumake
