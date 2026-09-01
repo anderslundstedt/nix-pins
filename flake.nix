@@ -25,12 +25,26 @@
     homebrew-cask.url   = "github:homebrew/homebrew-cask";
     homebrew-cask.flake = false;
 
+    nix-systems.url = "github:nix-systems/default";
+
+    agenix-darwin.url                         = "github:ryantm/agenix";
+    agenix-darwin.inputs.nixpkgs.follows      = "nixpkgs-darwin-stable";
+    agenix-darwin.inputs.home-manager.follows = "home-manager-darwin-stable";
+    agenix-darwin.inputs.darwin.follows       = "nix-darwin-stable";
+    agenix-darwin.inputs.systems.follows      = "nix-systems";
+    agenix-linux.url                          = "github:ryantm/agenix";
+    agenix-linux.inputs.nixpkgs.follows       = "nixos-stable";
+    agenix-linux.inputs.home-manager.follows  = "home-manager-linux-stable";
+    agenix-linux.inputs.darwin.follows        = "nix-darwin-stable";
+    agenix-linux.inputs.systems.follows       = "nix-systems";
+
     nix-auto-follow-darwin.url = "github:fzakaria/nix-auto-follow";
     nix-auto-follow-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin-stable";
     nix-auto-follow-linux.url = "github:fzakaria/nix-auto-follow";
     nix-auto-follow-linux.inputs.nixpkgs.follows = "nixos-stable";
 
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-utils.url                    = "github:numtide/flake-utils";
+    flake-utils.inputs.systems.follows = "nix-systems";
   };
 
   outputs = inputs@{...}:
@@ -61,6 +75,8 @@
             inputs.nixos-stable inputs.nixpkgs-darwin-stable;
           home-manager-stable = get-output
             inputs.home-manager-linux-stable inputs.home-manager-darwin-stable;
+          agenix              = get-output
+            inputs.agenix-linux inputs.agenix-darwin;
           nix-auto-follow     = get-output
             inputs.nix-auto-follow-linux inputs.nix-auto-follow-darwin;
 

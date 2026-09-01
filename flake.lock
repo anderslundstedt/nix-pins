@@ -1,5 +1,63 @@
 {
   "nodes": {
+    "agenix-darwin": {
+      "inputs": {
+        "darwin": [
+          "nix-darwin-stable"
+        ],
+        "home-manager": [
+          "home-manager-darwin-stable"
+        ],
+        "nixpkgs": [
+          "nixpkgs-darwin-stable"
+        ],
+        "systems": [
+          "nix-systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770165109,
+        "narHash": "sha256-9VnK6Oqai65puVJ4WYtCTvlJeXxMzAp/69HhQuTdl/I=",
+        "owner": "ryantm",
+        "repo": "agenix",
+        "rev": "b027ee29d959fda4b60b57566d64c98a202e0feb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryantm",
+        "repo": "agenix",
+        "type": "github"
+      }
+    },
+    "agenix-linux": {
+      "inputs": {
+        "darwin": [
+          "nix-darwin-stable"
+        ],
+        "home-manager": [
+          "home-manager-linux-stable"
+        ],
+        "nixpkgs": [
+          "nixos-stable"
+        ],
+        "systems": [
+          "nix-systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770165109,
+        "narHash": "sha256-9VnK6Oqai65puVJ4WYtCTvlJeXxMzAp/69HhQuTdl/I=",
+        "owner": "ryantm",
+        "repo": "agenix",
+        "rev": "b027ee29d959fda4b60b57566d64c98a202e0feb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryantm",
+        "repo": "agenix",
+        "type": "github"
+      }
+    },
     "brew-src": {
       "flake": false,
       "locked": {
@@ -116,7 +174,9 @@
     },
     "flake-utils": {
       "inputs": {
-        "systems": "systems"
+        "systems": [
+          "nix-systems"
+        ]
       },
       "locked": {
         "lastModified": 1731533236,
@@ -328,6 +388,21 @@
         "type": "github"
       }
     },
+    "nix-systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "nixos-24-11": {
       "locked": {
         "lastModified": 1751274312,
@@ -488,6 +563,8 @@
     },
     "root": {
       "inputs": {
+        "agenix-darwin": "agenix-darwin",
+        "agenix-linux": "agenix-linux",
         "determinate-systems": "determinate-systems",
         "flake-utils": "flake-utils",
         "home-manager-darwin-stable": "home-manager-darwin-stable",
@@ -498,6 +575,7 @@
         "nix-auto-follow-linux": "nix-auto-follow-linux",
         "nix-darwin-stable": "nix-darwin-stable",
         "nix-homebrew": "nix-homebrew",
+        "nix-systems": "nix-systems",
         "nixos-24-11": "nixos-24-11",
         "nixos-25-11": "nixos-25-11",
         "nixos-stable": "nixos-stable",
@@ -505,21 +583,6 @@
         "nixpkgs-darwin-25-11": "nixpkgs-darwin-25-11",
         "nixpkgs-darwin-stable": "nixpkgs-darwin-stable",
         "nixpkgs-unstable": "nixpkgs-unstable"
-      }
-    },
-    "systems": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
       }
     }
   },
