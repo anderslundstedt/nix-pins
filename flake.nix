@@ -19,6 +19,9 @@
     home-manager-linux-stable.url                     = "github:nix-community/home-manager/release-26.05";
     home-manager-linux-stable.inputs.nixpkgs.follows  = "nixos-stable";
 
+    lean-nvim.url   = "github:Julian/lean.nvim/v2026.4.1";
+    lean-nvim.flake = false;
+
     nix-homebrew.url    = "github:zhaofengli/nix-homebrew";
     homebrew-core.url   = "github:homebrew/homebrew-core";
     homebrew-core.flake = false;
