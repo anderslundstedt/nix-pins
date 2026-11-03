@@ -15,4 +15,5 @@ clean:
 	git clean -fdX
 
 test:
-	nix flake check --all-systems
+	nix flake check --all-systems --no-build
+	nix flake check
